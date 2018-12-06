@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>伪元素</title>
+    <style>
+      * div {
+        border: 1px dashed lightskyblue;
+        min-height: 100px;
+      }
+      /*设置伪元素显示横线*/
+      p:first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+      }
+      h3:first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+      span:first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+
+      h4:before {
+        content: "$";
+      }
+
+      h5:after {
+        content: url(like_2_s.png);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      首行特殊样式(first-line）
+      <p>
+        在中美达成“不升级贸易对抗共识”后三天，加拿大政府官方发布消息，应美方要求已于上周六逮捕华为首席财务官孟晚舟。孟晚舟为华为创始人任正非的长女。美方给出理由为孟晚舟“涉嫌违反美国对伊朗的贸易制裁。”
+        事件发生后，华为CMO陈黎芳表示：“近期，我们公司CFO孟晚舟女士在加拿大转机时、被加拿大当局代表美国政府暂时扣留，美国正在寻求对孟晚舟女士的引渡
+        。面临纽约东区未指明的指控。关于具体指控，提供给华为的信息非常少。华为并不知晓孟女士有任何不当行为。公司相信,
+        加拿大和美国的法律体系最终会给出公正的结论。”她还强调，华为遵守业务所在国所有适用法律和法规。
+        据南华早报的报道，其引述加拿大官方消息称，美方要求从加拿大引渡孟晚舟，并计划在本周五举办听证会。孟晚舟已经向加拿大相关部门申请禁止信息公开（publication
+        ban），加拿大方面表示暂时无法提供更多信息。
+      </p>
+    </div>
+
+    <div>
+      首字母特殊样式(first-letter)
+      <h3>首字母要特别的突出</h3>
+      <h3>Hello world</h3>
+      <span>Hello world</span>
+    </div>
+
+    <div>
+      before
+      <h4>before给本行一个钱币标识</h4>
+      <h5>after给本行一个图片标识</h5>
+    </div>
+  </body>
+</html>

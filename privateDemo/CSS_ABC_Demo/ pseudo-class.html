@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>伪类</title>
+    <style>
+        * div {
+            border: 1px dashed lightskyblue;
+            min-height: 100px;
+        }
+
+        /*伪类style开始*/
+        /*超链接相关伪类*/
+        a.one:link {
+            color: #ff0000
+        }
+
+        a.one:visited {
+            color: #0000ff
+        }
+
+        a.one:hover {
+            color: #ffcc00
+        }
+
+        a.one:active {
+            color: #000000
+        }
+
+        a.two:link {
+            color: #ff0000
+        }
+
+        a.two:visited {
+            color: #0000ff
+        }
+
+        a.two:hover {
+            font-size: 150%
+        }
+
+        a.three:link {
+            color: #ff0000
+        }
+
+        a.three:visited {
+            color: #0000ff
+        }
+
+        a.three:hover {
+            background: #66ff66
+        }
+
+        a.four:link {
+            color: #ff0000
+        }
+
+        a.four:visited {
+            color: #0000ff
+        }
+
+        a.four:hover {
+            font-family: monospace
+        }
+
+        a.five:link {
+            color: #ff0000;
+            text-decoration: none
+        }
+
+        a.five:visited {
+            color: #0000ff;
+            text-decoration: none
+        }
+
+        a.five:hover {
+            text-decoration: underline
+        }
+
+        /*其他元素中使用伪类*/
+        span:first-child {
+            color: green;
+        }
+
+        li:first-child {
+            color: red;
+        }
+
+        /*针对语言定义伪类*/
+        q:lang(no) {
+            quotes: "~""~"
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        伪类应用于超链接
+        <p>请把鼠标移动到这些链接上，以查看效果：</p>
+        <p><b><a class="one" href="https://www.baidu.com/" target="_blank">这个链接改变颜色</a></b></p>
+        <p><b><a class="two" href="https://www.baidu.com/" target="_blank">这个链接改变字体大小</a></b></p>
+        <p><b><a class="three" href="https://www.baidu.com/" target="_blank">这个链接改变背景颜色</a></b></p>
+        <p><b><a class="four" href="https://www.baidu.com/" target="_blank">这个链接改变字体系列</a></b></p>
+        <p><b><a class="five" href="https://www.baidu.com/" target="_blank">这个链接改变文本装饰</a></b></p>
+    </div>
+    <div>
+        <span>我是段落P的第一个子对象！</span>
+        <ul>
+            <li>我是li的第一个子对象 <p>我是li的第二个子对象</p>
+            </li>
+            <li>Turn key clockwise</li>
+            <li>Push accelerator</li>
+        </ul>
+        <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+    </div>
+    <div>
+        <p>普通文本 <q lang="no">我是被lang=no包围的文本</q> 普通文本</p>
+    </div>
+
+</body>
+
+</html>

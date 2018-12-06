@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>css选择器</title>
+    <style>
+        /*通配符选择器，与文档中的任何元素相匹配，设置样式，类似于全选:*/
+        * {
+            color: indigo;
+        }
+        * div{
+            border: 1px dashed lightskyblue;
+            min-height: 100px;
+        }
+
+        /*元素选择器，针对某个html元素进行样式设置*/
+        th {
+            color: #000000;
+        }
+
+        /*id选择器，每个html文档中只能出现一次,常常用于建立派生选择器*/
+        #id1 {
+            background: lightcoral;
+        }
+
+        /*派生选择器*/
+        #id1 span {
+            background: lightyellow;
+        }
+
+        /*类选择器，也可以和派生选择器*/
+        .demo {
+            background: lightblue
+        }
+
+        /*类派生选择器*/
+        .demo span {
+            background: lightgreen;
+        }
+
+        /*元素可以基于类被选择*/
+        p.demo2 {
+            color: orangered;
+        }
+
+        /*属性选择器*/
+        [type]{
+            background: #000000
+        }
+        [placeholder="属性选择器1"]{
+            border: 1px solid red;
+        }
+        /*后代选择器——包含选择器——任意的后代元素均生效*/
+        div a{
+            color: blue
+        }
+        /*子元素选择器*/
+        h3 > strong {color:red;}
+        h2 strong{
+           color:red;
+        }
+        /*相邻兄弟选择器，li元素后面的所有li元素中的字体设置加粗*/
+        li + li {font-weight:bold;}
+
+
+    </style>
+</head>
+
+<body>
+    <!--id+id派生选择器-->
+    <div id="id1">
+        id选择器
+        <span>id选择器派生</span>
+    </div>
+    <!--类+类派生选择器-->
+    <div class="demo">
+        类选择器
+        <span>类选择器派生</span>
+    </div>
+    <div>
+        <p class="demo2">元素可基于类被选择设置样式</p>
+        <p>类2选择器对比</p>
+    </div>
+    <!--元素选择器-->
+    <div>
+        元素选择器
+        <table>
+            <tr>
+                <th>表头1</th>
+                <th>表头2</th>
+                <th>表头3</th>
+            </tr>
+        </table>
+    </div>
+    <!--属性选择器-->
+    <div>
+        属性选择器
+        <input type="search">
+        <input placeholder="属性选择器1">
+        <input placeholder="属性选择器2">
+    </div>
+
+    <!--后代选择器——包含选择器-->
+    <div>
+        后代选择器
+        <a>我是后代1</a>
+        <a>我是后代2</a>
+        <a>我是后代3</a>
+    </div>
+
+    <!--子元素选择器-->
+    <div>
+        子元素选择器
+        <h3>hello <strong>我是子元素1</strong> <strong>我是子元素2</strong> O(∩_∩)O</h3>
+        <h3>hello <em>我是子元素<strong>我是子元素的子元素</strong></em> O(∩_∩)O</h3>
+        <h2>hello<strong>我是子元素1</strong> <em>我是子元素em <strong>我是em的子元素strong，子元素的子元素也是后代哈</strong></em> O(∩_∩)O</h2>
+    </div>
+
+    <!--相邻兄弟选择器-->
+    <div>
+        相邻兄弟选择器
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+    </div>
+</body>
+
+</html>
