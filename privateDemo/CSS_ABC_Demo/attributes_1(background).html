@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>CSS基础示例</title>
+    <style>
+        .backgroud1 {
+            /*
+            background整体配置全部属性时候的顺序依次是：
+            background-color 
+            background-image
+            background-repeat 
+            background-attachment 
+            background-position
+            */
+            background: red url(timg.jpeg) no-repeat 5px 5px scroll;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: inline">
+        <div class="backgroud1">背景容器1</div>
+        <div class="backgroud2">背景容器2</div>
+        <div class="backgroud3">背景容器3</div>
+    </div>
+</body>
+
+</html>
